@@ -90,7 +90,7 @@ public class SeckillController {
             return new SeckillResult<SeckillExcution>(false, "未注册/登陆");
         }
         try {
-            SeckillExcution seckillExcution = seckillService.executeSeckill(seckillId, userPhone, md5);
+            SeckillExcution seckillExcution = seckillService.executeSeckillProcedure(seckillId, userPhone, md5);
             return new SeckillResult<SeckillExcution>(true, seckillExcution);
         } catch (SeckillCloseException e) {
             SeckillExcution seckillExcution = new SeckillExcution(seckillId, SeckillStateEnum.END);
