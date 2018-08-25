@@ -2,8 +2,9 @@
 # 秒杀系统
 - spring+springMVC+mybatis
 - 并发优化
-    * 采用redis进行缓存
-    * 事务sql在MySQL中执行（存储过程） 
+    * 前端优化：一次秒杀成功之后按钮便不可再点
+    * 采用redis进行缓存秒杀过程中不变的查询
+    * 事务sql在MySQL中执行（存储过程）-> 减少事务行级锁的持有时间 
 
 
 - 2018-08-12 实现DAO层，完成mybatis和spring的整合
